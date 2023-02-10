@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # prints "best school" 10 times using for loop
 
-for ((i=0; i<10;i++))
+i=0
+for i in {1..10}
 do
-	echo "Best school"
+    echo "Best School"
 done
+i=$i
