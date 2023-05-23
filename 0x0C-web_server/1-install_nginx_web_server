@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Install nginx on web server; Nginx should be listening on port 80
-
+# Script Bash que configura una nueva máquina Ubuntu para
+# respetar los requisitos anteriores
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo ufw allow "Nginx HTTP"
-echo 'Hello World!' > /var/www/html/index.html
-sudo service nginx start
+sudo chown -R ubuntu /var/www
+echo "Hello World" > /var/www/html/index.nginx-debian.html
+service nginx start
