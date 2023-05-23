@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# Script Bash que configura una nueva máquina Ubuntu para
-# respetar los requisitos anteriores
+# Installs Nginx with the following configurations:
+#   Listens on port 80.
+#   Returns a page containing "Hello World!" when queried
+#   at the root with a curl GET request.
+
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo chown -R ubuntu /var/www
-echo "Hello World" > /var/www/html/index.nginx-debian.html
-service nginx start
+echo 'Hello World!' > /var/www/html/index.html
+
+sudo service nginx restart
